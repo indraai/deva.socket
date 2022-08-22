@@ -1,6 +1,6 @@
 {
   "name": "@indra.ai/socketdeva",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The Socket Deva",
   "main": "index.js",
   "scripts": {
