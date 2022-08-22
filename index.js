@@ -1,4 +1,6 @@
 // Copyright (c)2022 Quinn Michaels
+// The Socket Deva
+
 const fs = require('fs');
 const path = require('path');
 
@@ -153,6 +155,7 @@ const SOCKET = new Deva({
       });
     },
   },
+
   /**************
   func: onStart
   params: none
@@ -176,6 +179,7 @@ const SOCKET = new Deva({
     });
     return this.enter();
   },
+
   /**************
   func: onInit
   params: none
