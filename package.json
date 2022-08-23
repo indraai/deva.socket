@@ -1,5 +1,5 @@
 {
-  "name": "@indra.ai/socketdeva",
+  "name": "@feecting/socketdeva",
   "version": "0.0.5",
   "description": "The Socket Deva",
   "main": "index.js",
