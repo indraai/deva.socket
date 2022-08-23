@@ -31,7 +31,7 @@ const SOCKET = new Deva({
     /**************
     func: socket
     params: packet
-    describe: Socket listener that sends the broadcast even to the available
+    describe: Socket listener that sends the broadcast event to the available
     socket.
     ***************/
     'socket'(packet) {
