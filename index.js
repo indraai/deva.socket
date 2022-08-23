@@ -9,7 +9,7 @@ const {agent,vars} = require(data_path).data;
 
 const Socket = require('socket.io');
 
-const Deva = require('@indra.ai/deva');
+const Deva = require('@feecting/deva');
 const SOCKET = new Deva({
   agent: {
     uid: agent.uid,
