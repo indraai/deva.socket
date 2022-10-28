@@ -1,5 +1,5 @@
 {
-  "name": "@feecting/socketdeva",
+  "name": "@indra.ai/socketdeva",
   "version": "0.0.6",
   "description": "The Socket Deva",
   "main": "index.js",
@@ -20,7 +20,7 @@
     "url": "https://github.com/indraai/SocketDeva/issues"
   },
   "dependencies": {
-    "@feecting/deva": "^1.0.25",
+    "@indra.ai/deva": "^1.0.25",
     "socket.io": "^3.1.1",
     "socket.io-client": "^3.1.2"
   },
