@@ -12,7 +12,7 @@ const Socket = require('socket.io');
 const Deva = require('@indra.ai/deva');
 const SOCKET = new Deva({
   agent: {
-    uid: agent.uid,
+    id: agent.id,
     key: agent.key,
     name: agent.name,
     describe: agent.describe,

@@ -16,11 +16,12 @@
   ],
   "author": "Quinn Michaels",
   "license": "MIT",
+  "copyright": "2023",
   "bugs": {
     "url": "https://github.com/indraai/SocketDeva/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.0.25",
+    "@indra.ai/deva": "^1.1.20",
     "socket.io": "^3.1.1",
     "socket.io-client": "^3.1.2"
   },
