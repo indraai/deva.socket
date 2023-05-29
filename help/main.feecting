@@ -2,6 +2,11 @@
 
 p:This is the main help file for SOCKET Deva which handles socket.io communications between the terminal and the user interface.
 
+id: 5318566628492
+key: development
+name: Development Deva
+describe: Providing support to deva.world.
+
 ### Methods
 
 cmd:#socket status

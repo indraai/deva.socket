@@ -3,6 +3,19 @@
 
 const fs = require('fs');
 const path = require('path');
+const package = require('./package.json');
+const info = {
+  id: package.id,
+  name: package.name,
+  describe: package.description,
+  version: package.version,
+  url: package.homepage,
+  git: package.repository.url,
+  bugs: package.bugs.url,
+  author: package.author,
+  license: package.license,
+  copyright: package.copyright,
+};
 
 const data_path = path.join(__dirname, 'data.json');
 const {agent,vars} = require(data_path).data;
@@ -11,11 +24,10 @@ const Socket = require('socket.io');
 
 const Deva = require('@indra.ai/deva');
 const SOCKET = new Deva({
+  info,
   agent: {
     id: agent.id,
     key: agent.key,
-    name: agent.name,
-    describe: agent.describe,
     prompt: agent.prompt,
     voice: agent.voice,
     profile: agent.profile,
@@ -23,6 +35,9 @@ const SOCKET = new Deva({
       return input.trim();
     },
     parse(input) {
+      return input.trim();
+    },
+    process(input) {
       return input.trim();
     }
   },
@@ -34,11 +49,26 @@ const SOCKET = new Deva({
     describe: Socket listener that sends the broadcast event to the available
     socket.
     ***************/
-    'socket'(packet) {
+    'socket:global'(packet) {
       if (!packet || !this.active) return;
       this.func.emit({say:packet.event, message:packet.data}).then(() => {
         this.talk(`${packet.event}:${packet.id}`, true);
       })
+    },
+
+    /**************
+    func: socket:terminal
+    params: packet
+    describe: pass a message to the socket terminal then talk a response when
+    the socket broadcast is complete from the socketTreminal function.
+    ***************/
+    'socket:client'(packet) {
+      if (!packet || !this.active) return;
+      this.func.socketClient(packet).then(result => {
+        this.talk(`socket:client:${packet.id}`, true)
+      }).catch(err => {
+        this.talk('error', {err: err.toString('utf8')});
+      });
     },
 
     /**************
@@ -50,67 +80,40 @@ const SOCKET = new Deva({
       if (!packet || !this.active) return;
       this.func.emit({say:'error', message:packet});
     },
-
-    /**************
-    func: socket:terminal
-    params: packet
-    describe: pass a message to the socket terminal then talk a response when
-    the socket broadcast is complete from the socketTreminal function.
-    ***************/
-    'socket:terminal'(packet) {
-      if (!packet || !this.active) return;
-
-      this.func.socketTerminal(packet).then(result => {
-        this.talk(`socket:terminal:${packet.id}`, true)
-      }).catch(err => {
-        this.talk('error', {err: err.toString('utf8')});
-      });
-    },
-
-    /**************
-    func: systems
-    params: packet
-    describe: system listenr to broadcast system events to the socket.
-    ***************/
-    'system'(packet) {
-      if (!packet || !this.active) return;
-      this.func.systemEvent(packet).then(result => {
-        this.talk(`system:${packet.id}`, true)
-      }).catch(err => {
-        this.talk('error', {err: err.toString('utf8')});
-      })
-    },
   },
   modules: {
-    socket: false,
     server: require('http').createServer(),
+    socket: false,
   },
   sockets: {},
   deva: {},
   func: {
     /**************
-    func: socketTerminal
+    func: socketClient
     params: packet
     describe: Send the packet information to the available socket terminal.
     ***************/
-    socketTerminal(packet) {
+    socketClient(packet) {
+      const client = this.client();
       // this is where we emit to the client socket oh yeah
       setImmediate(() => {
-        this.modules.socket.to(this.client.uid).emit('socket:terminal', packet);
-      });
+        this.modules.socket.to(client.id).emit('socket:client', packet);
+      }
       // now we get the socket where the client id is.
       return Promise.resolve();
     },
 
     /**************
     func: systemEvent
-    params: packet
+    params:
+      - event
+      - packet
     describe: function used for broadcasating system evetnts.
     ***************/
-    systemEvent(packet) {
-      packet.data._id = packet.id;
+    socketEmit(event, packet) {
+      const client = this.client();
       setImmediate(() => {
-        this.modules.socket.to(packet.client.uid).emit(packet.event, packet.data);
+        this.modules.socket.to(client.id).emit(event, packet);
       });
       // now we get the socket where the client id is.
       return Promise.resolve();
@@ -127,6 +130,9 @@ const SOCKET = new Deva({
     },
   },
   methods: {
+    client(packet) {
+      return this.func.socketClient(packet)
+    },
     /**************
     method: status
     params: packet
@@ -163,7 +169,7 @@ const SOCKET = new Deva({
   and watches for disconnect and client:data events before joining a private
   socket..
   ***************/
-  onStart() {
+  onStart(data) {
     this.modules.socket = Socket(this.modules.server, {
       cors: {
         origin: true,
@@ -171,13 +177,12 @@ const SOCKET = new Deva({
       }
     });
     this.modules.socket.on('connection', socket => {
-      socket
-        .on('disconnect', () => {})
-        .on('client:data', data => {
-          socket.join(data.uid);
-        });
-    });
-    return this.enter();
+      socket.on('disconnect', () => {})
+            .on('client:data', data => {
+              socket.join(data.id);
+            });
+          });
+    return this.enter(data);
   },
 
   /**************
@@ -186,10 +191,10 @@ const SOCKET = new Deva({
   describe: The onInit function sets the socket port and server information
   and prompts it to the user console before returning the this.start() function.
   ***************/
-  onInit() {
-    this.prompt(`${this.vars.messages.init} PORT:${this.vars.port}`);
-    this.modules.server.listen(this.vars.port);
-    return this.start();
+  onInit(data) {
+    this.prompt(`${this.vars.messages.init} port:${this.config.ports.socket}`);
+    this.modules.server.listen(this.config.ports.socket);
+    return this.start(data);
   },
 });
 module.exports = SOCKET

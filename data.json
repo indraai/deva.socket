@@ -4,10 +4,8 @@
   "copyright": "Copyright (c)2023 Quinn Michaels. All rights reserved.",
   "data": {
     "agent": {
-      "id": 2393260202856,
+      "id": 5318566628492,
       "key": "socket",
-      "name": "SOCKET",
-      "describe": "Socket Deva",
       "prompt": {
         "emoji": "🥊",
         "text": "socket",
@@ -29,10 +27,11 @@
         "speed": 1
       },
       "profile": {
+        "name": "Socket Deva",
+        "describe": "The Socket Deva is managing socket connections.",
         "emoji": "/public/devas/socket/emoji.png",
         "avatar": "/public/devas/socket/avatar.png",
         "background": "/assets/img/indra-background.jpg",
-        "describe": "Socket Deva",
         "gender": "M"
       }
     },
