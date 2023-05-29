@@ -98,7 +98,7 @@ const SOCKET = new Deva({
       // this is where we emit to the client socket oh yeah
       setImmediate(() => {
         this.modules.socket.to(client.id).emit('socket:client', packet);
-      }
+      });
       // now we get the socket where the client id is.
       return Promise.resolve();
     },
@@ -163,13 +163,15 @@ const SOCKET = new Deva({
   },
 
   /**************
-  func: onStart
-  params: none
+  func: onDone
+  params: data
   describe: The onStart function sets up the necessary socket module for the deva
   and watches for disconnect and client:data events before joining a private
   socket..
   ***************/
-  onStart(data) {
+  onDone(data) {
+    const client = this.client();
+    this.prompt(this.vars.messages.config);
     this.modules.socket = Socket(this.modules.server, {
       cors: {
         origin: true,
@@ -177,12 +179,13 @@ const SOCKET = new Deva({
       }
     });
     this.modules.socket.on('connection', socket => {
+      socket.emit('socket:clientdata', client);
       socket.on('disconnect', () => {})
-            .on('client:data', data => {
-              socket.join(data.id);
-            });
-          });
-    return this.enter(data);
+        // .on('client:data', data => {
+        //   socket.join(data.id);
+        // });
+    });
+    return Promise.resolve(data);
   },
 
   /**************
