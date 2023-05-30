@@ -124,8 +124,8 @@ const SOCKET = new Deva({
     params: opts - say & message
     describe: Emit a message to the say event
     ***************/
-    emit(opts) {
-      this.modules.socket.emit(opts.say, opts.message);
+    emit(event, data) {
+      this.modules.socket.emit(event, data);
       return Promise.resolve();
     },
   },
@@ -179,11 +179,28 @@ const SOCKET = new Deva({
       }
     });
     this.modules.socket.on('connection', socket => {
+      socket.join(client.id);
       socket.emit('socket:clientdata', client);
       socket.on('disconnect', () => {})
         // .on('client:data', data => {
         //   socket.join(data.id);
         // });
+    });
+
+    this.listen('devacore:prompt', packet => {
+      this.func.emit(`${agent.key}:devacore`, packet);
+    });
+    this.listen('devacore:state', packet => {
+      this.func.emit(`${agent.key}:devacore`, packet);
+    });
+    this.listen('devacore:feature', packet => {
+      this.func.emit(`${agent.key}:devacore`, packet);
+    });
+    this.listen('devacore:action', packet => {
+      this.func.emit(`${agent.key}:devacore`, packet);
+    });
+    this.listen('devacore:zone', packet => {
+      this.func.emit(`${agent.key}:devacore`, packet);
     });
     return Promise.resolve(data);
   },
