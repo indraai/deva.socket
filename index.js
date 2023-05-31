@@ -190,6 +190,9 @@ const SOCKET = new Deva({
     this.listen('devacore:prompt', packet => {
       this.func.emit(`${agent.key}:devacore`, packet);
     });
+    this.listen('devacore:context', packet => {
+      this.func.emit(`${agent.key}:devacore`, packet);
+    });
     this.listen('devacore:state', packet => {
       this.func.emit(`${agent.key}:devacore`, packet);
     });
