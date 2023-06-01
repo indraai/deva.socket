@@ -1,13 +1,19 @@
+image: ::agent_avatar::
+
 ## Socket Deva
 
 p:This is the main help file for SOCKET Deva which handles socket.io communications between the terminal and the user interface.
 
-id: 5318566628492
-key: development
-name: Development Deva
-describe: Providing support to deva.world.
+id: ::agent_id::
+key: #::agent_key::
+name: ::agent_name::
+emoji: ::agent_emoji::
+describe: ::agent_describe::
 
 ### Methods
+
+cmd:#socket uid
+p:This will return the uid.
 
 cmd:#socket status
 p:This will return the status of the Socket Deva with time and date since online.
@@ -15,5 +21,13 @@ p:This will return the status of the Socket Deva with time and date since online
 cmd:#socket help
 p:Get help workign with the Socket Deva.
 
-#color = var(--color-baby-blue)
+#color = var(--color-orange)
 #bgcolor = var(--color-black)
+
+---
+
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+
+copyright: (c)2023 Quinn Michaels

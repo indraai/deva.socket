@@ -11,28 +11,27 @@
         "text": "socket",
         "colors": {
           "label": {
-            "R": 255,
-            "G": 126,
-            "B": 21
+            "R": 24,
+            "G": 58,
+            "B": 155
           },
           "text": {
-            "R": 255,
-            "G": 126,
-            "B": 21
+            "R": 50,
+            "G": 100,
+            "B": 243
           }
         }
-      },
-      "voice": {
-        "speech": "Alex",
-        "speed": 1
       },
       "profile": {
         "name": "Socket Deva",
         "describe": "The Socket Deva is managing socket connections.",
         "emoji": "/public/devas/socket/emoji.png",
         "avatar": "/public/devas/socket/avatar.png",
-        "background": "/assets/img/indra-background.jpg",
-        "gender": "M"
+        "background": "/public/devas/socket/background.png",
+        "color": "#204ecf",
+        "bgcolor": "#000000",
+        "gender": "M",
+        "voice": "Joey"
       }
     },
     "vars": {
@@ -47,8 +46,11 @@
         "error": "💣 ERROR!",
         "config": "🤝 Configur socket..."
       },
-      "sockets": {},
-      "rooms": []
+      "context": {
+        "uid": "Socket Deva getting uid",
+        "status": "Socket Deva getting status",
+        "help": "Socket Deva getting help"
+      }
     }
   }
 }

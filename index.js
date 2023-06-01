@@ -64,7 +64,7 @@ const SOCKET = new Deva({
     ***************/
     'socket:client'(packet) {
       if (!packet || !this.active) return;
-      this.func.socketClient(packet).then(result => {
+      this.func.to(packet).then(result => {
         this.talk(`socket:client:${packet.id}`, true)
       }).catch(err => {
         this.talk('error', {err: err.toString('utf8')});
@@ -89,31 +89,15 @@ const SOCKET = new Deva({
   deva: {},
   func: {
     /**************
-    func: socketClient
+    func: to
     params: packet
     describe: Send the packet information to the available socket terminal.
     ***************/
-    socketClient(packet) {
+    to(packet) {
       const client = this.client();
       // this is where we emit to the client socket oh yeah
       setImmediate(() => {
         this.modules.socket.to(client.id).emit('socket:client', packet);
-      });
-      // now we get the socket where the client id is.
-      return Promise.resolve();
-    },
-
-    /**************
-    func: systemEvent
-    params:
-      - event
-      - packet
-    describe: function used for broadcasating system evetnts.
-    ***************/
-    socketEmit(event, packet) {
-      const client = this.client();
-      setImmediate(() => {
-        this.modules.socket.to(client.id).emit(event, packet);
       });
       // now we get the socket where the client id is.
       return Promise.resolve();
@@ -131,15 +115,27 @@ const SOCKET = new Deva({
   },
   methods: {
     client(packet) {
-      return this.func.socketClient(packet)
+      return this.func.to(packet)
     },
+
+    /**************
+    method: uid
+    params: packet
+    describe: Return a system id to the user from the Log Buddy.
+    ***************/
+    uid(packet) {
+      this.context('uid');
+      return Promise.resolve(this.uid());
+    },
+
     /**************
     method: status
     params: packet
     describe: Return the socket deva status.
     ***************/
     status(packet) {
-      return this.status();
+      this.context('status');
+      return Promise.resolve(this.status());
     },
 
     /**************
@@ -148,8 +144,9 @@ const SOCKET = new Deva({
     describe: Return the Socket Deva help.
     ***************/
     help(packet) {
+      this.context('help');
       return new Promise((resolve, reject) => {
-        this.lib.help(packet.q.text, __dirname).then(help => {
+        this.help(packet.q.text, __dirname).then(help => {
           return this.question(`#feecting parse ${help}`);
         }).then(parsed => {
           return resolve({
