@@ -49,10 +49,10 @@ const SOCKET = new Deva({
     socket.
     ***************/
     'socket:global'(packet) {
-      if (!packet || !this.active) return;
-      this.func.emit({say:packet.event, message:packet.data}).then(() => {
-        this.talk(`${packet.event}:${packet.id}`, true);
-      })
+      if (!packet || !this._active) return;
+      this.func.emit('socket:global', packet).then(() => {
+        this.talk(`socket:global:${packet.id}`, true);
+      });
     },
 
     /**************
@@ -62,11 +62,9 @@ const SOCKET = new Deva({
     the socket broadcast is complete from the socketTreminal function.
     ***************/
     'socket:client'(packet) {
-      if (!packet || !this.active) return;
+      if (!packet || !this._active) return;
       this.func.to(packet).then(result => {
         this.talk(`socket:client:${packet.id}`, true)
-      }).catch(err => {
-        this.talk('error', {err: err.toString('utf8')});
       });
     },
 
@@ -76,7 +74,7 @@ const SOCKET = new Deva({
     describe: Broadcast errors to the socket.
     ***************/
     'error'(packet) {
-      if (!packet || !this.active) return;
+      if (!packet || !this._active) return;
       this.func.emit({say:'error', message:packet});
     },
   },
@@ -93,10 +91,9 @@ const SOCKET = new Deva({
     describe: Send the packet information to the available socket terminal.
     ***************/
     to(packet) {
-      const client = this.client();
       // this is where we emit to the client socket oh yeah
       setImmediate(() => {
-        this.modules.socket.to(client.id).emit('socket:client', packet);
+        this.modules.socket.to(`client:${packet.q.client.id}`).emit('socket:client', packet);
       });
       // now we get the socket where the client id is.
       return Promise.resolve();
@@ -166,7 +163,6 @@ const SOCKET = new Deva({
   socket..
   ***************/
   onDone(data) {
-    const client = this.client();
     this.prompt(this.vars.messages.config);
     this.modules.socket = Socket(this.modules.server, {
       cors: {
@@ -175,8 +171,8 @@ const SOCKET = new Deva({
       }
     });
     this.modules.socket.on('connection', socket => {
-      socket.join(client.id);
-      socket.emit('socket:clientdata', client);
+      socket.join(`client:${data.client.id}`);
+      socket.emit('socket:clientdata', data.client);
       socket.on('disconnect', () => {})
         // .on('client:data', data => {
         //   socket.join(data.id);
