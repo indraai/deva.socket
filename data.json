@@ -47,9 +47,12 @@
         "config": "🤝 Configur socket..."
       },
       "context": {
-        "uid": "Socket Deva getting uid",
-        "status": "Socket Deva getting status",
-        "help": "Socket Deva getting help"
+        "uid": "generating uid",
+        "status": "getting status",
+        "info": "getting info",
+        "feature": "accessing feature",
+        "issue": "has issues",
+        "help": "asking for help"
       }
     }
   }
