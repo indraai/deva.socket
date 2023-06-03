@@ -1,28 +1,47 @@
 image: ::agent_avatar::
 
-## Socket Deva
+# ::agent_name::
 
-p:This is the main help file for SOCKET Deva which handles socket.io communications between the terminal and the user interface.
+p:This is the main help file for ::agent_name::.
 
 id: ::agent_id::
-key: #::agent_key::
+key: ::agent_key::
 name: ::agent_name::
 emoji: ::agent_emoji::
 describe: ::agent_describe::
 
-### Methods
+## Features
 
-cmd:#socket uid
-p:This will return the uid.
+### security
+p: The local #security feature available to ::agent_name::.
+cmd:#::agent_key:: security
 
-cmd:#socket status
-p:This will return the status of the Socket Deva with time and date since online.
+### support
+p: The local #support feature available to ::agent_name::.
+cmd:#::agent_key:: support
 
-cmd:#socket help
-p:Get help workign with the Socket Deva.
+### services
+p: The local #services feature available to ::agent_name::.
+cmd:#::agent_key:: services
 
-#color = var(--color-orange)
-#bgcolor = var(--color-black)
+
+## Methods
+
+### uid
+p:Generate a unique id from the ::agent_name::.
+cmd:#::agent_key:: uid
+
+### status
+p:Return the status for the ::agent_name::.
+cmd:#::agent_key:: status
+
+### issue
+p: Create an issue associated with ::agent_name:: source code repository.
+tty:#::agent_key:: issue [title of issue]
+
+### help
+p:Get help using the ::agent_name::
+cmd:#::agent_key:: help
 
 ---
 
