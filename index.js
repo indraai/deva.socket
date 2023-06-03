@@ -1,6 +1,6 @@
 // Copyright (c)2022 Quinn Michaels
 // The Socket Deva
-
+const Deva = require('@indra.ai/deva');
 const fs = require('fs');
 const path = require('path');
 const package = require('./package.json');
@@ -9,6 +9,7 @@ const info = {
   name: package.name,
   describe: package.description,
   version: package.version,
+  dir: __dirname,
   url: package.homepage,
   git: package.repository.url,
   bugs: package.bugs.url,
@@ -22,25 +23,15 @@ const {agent,vars} = require(data_path).data;
 
 const Socket = require('socket.io');
 
-const Deva = require('@indra.ai/deva');
 const SOCKET = new Deva({
   info,
-  agent: {
-    id: agent.id,
-    key: agent.key,
-    prompt: agent.prompt,
-    profile: agent.profile,
-    translate(input) {
-      return input.trim();
-    },
-    parse(input) {
-      return input.trim();
-    },
-    process(input) {
-      return input.trim();
-    }
-  },
+  agent,
   vars,
+  utils: {
+    translate(input) {return input.trim();},
+    parse(input) {return input.trim();},
+    process(input) {return input.trim();},
+  },
   listeners: {
     /**************
     func: socket
@@ -109,51 +100,7 @@ const SOCKET = new Deva({
       return Promise.resolve();
     },
   },
-  methods: {
-    client(packet) {
-      return this.func.to(packet)
-    },
-
-    /**************
-    method: uid
-    params: packet
-    describe: Return a system id to the user from the Log Buddy.
-    ***************/
-    uid(packet) {
-      this.context('uid');
-      return Promise.resolve(this.uid());
-    },
-
-    /**************
-    method: status
-    params: packet
-    describe: Return the socket deva status.
-    ***************/
-    status(packet) {
-      this.context('status');
-      return Promise.resolve(this.status());
-    },
-
-    /**************
-    method: help
-    params: packet
-    describe: Return the Socket Deva help.
-    ***************/
-    help(packet) {
-      this.context('help');
-      return new Promise((resolve, reject) => {
-        this.help(packet.q.text, __dirname).then(help => {
-          return this.question(`#feecting parse ${help}`);
-        }).then(parsed => {
-          return resolve({
-            text: parsed.a.text,
-            html: parsed.a.html,
-            data: parsed.a.data,
-          });
-        }).catch(reject);
-      });
-    },
-  },
+  methods: {},
 
   /**************
   func: onDone
