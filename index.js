@@ -60,6 +60,19 @@ const SOCKET = new Deva({
     },
 
     /**************
+    func: socket:event
+    params: packet
+    describe: pass a message to the socket event then talk a response when
+    the socket broadcast is complete from the socketTreminal function.
+    ***************/
+    'socket:event'(packet) {
+      if (!packet || !this._active) return;
+      this.func.event(packet).then(result => {
+        this.talk(`socket:event:${packet.id}`, true)
+      });
+    },
+
+    /**************
     func: error
     params: packet
     describe: Broadcast errors to the socket.
@@ -97,6 +110,16 @@ const SOCKET = new Deva({
     ***************/
     emit(event, data) {
       this.modules.socket.emit(event, data);
+      return Promise.resolve();
+    },
+
+    /**************
+    func: event
+    params: opts - say & message
+    describe: send the value to a the key event
+    ***************/
+    event(opts) {
+      this.modules.socket.emit(otps.event, data);
       return Promise.resolve();
     },
   },
