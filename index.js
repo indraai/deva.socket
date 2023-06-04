@@ -112,7 +112,6 @@ const SOCKET = new Deva({
       this.modules.socket.emit(event, data);
       return Promise.resolve();
     },
-
     /**************
     func: event
     params: opts - say & message
@@ -124,7 +123,6 @@ const SOCKET = new Deva({
     },
   },
   methods: {},
-
   /**************
   func: onDone
   params: data
