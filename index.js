@@ -119,7 +119,7 @@ const SOCKET = new Deva({
     describe: send the value to a the key event
     ***************/
     event(opts) {
-      this.modules.socket.emit(otps.event, data);
+      this.modules.socket.emit(opts.event, data);
       return Promise.resolve();
     },
   },
