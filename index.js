@@ -42,7 +42,7 @@ const SOCKET = new Deva({
     'socket:global'(packet) {
       if (!packet || !this._active) return;
       this.func.emit('socket:global', packet).then(() => {
-        this.talk(`socket:global:${packet.id}`, true);
+        this.talk(`socket:global:${packet.id}`, packet);
       });
     },
 
