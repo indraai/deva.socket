@@ -10,6 +10,27 @@ name: ::agent_name::
 emoji: ::agent_emoji::
 describe: ::agent_describe::
 
+## Listeners
+p: The socket listerers that broadcase events.
+
+### socket:global
+p: Socket gloal will broadcase an event on the `socket:global` event.
+
+example: this.talk(`socket:global` {data});
+
+### socket:client
+p: Broadcast an event to the client socket.
+
+### socket:event
+p: Broadcast a socket event from the passed in event element in the data.
+
+example: this.talk(`socket:event` {data: {event, ...}})
+
+
+## Functions
+p: The functions that the different socket methods can call.
+
+
 ## Features
 
 ### security

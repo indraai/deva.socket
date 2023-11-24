@@ -8,7 +8,7 @@
       "key": "socket",
       "prompt": {
         "emoji": "🥊",
-        "text": "socket",
+        "text": "Socket",
         "colors": {
           "label": {
             "R": 24,
@@ -44,7 +44,7 @@
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
         "error": "💣 ERROR!",
-        "config": "🤝 Configur socket..."
+        "config": "🔧 Configure socket..."
       },
       "context": {
         "uid": "generating uid",

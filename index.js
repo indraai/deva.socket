@@ -130,8 +130,7 @@ const SOCKET = new Deva({
   and watches for disconnect and client:data events before joining a private
   socket..
   ***************/
-  onDone(data) {
-    this.prompt(this.vars.messages.config);
+  onInit(data) {
     this.modules.socket = Socket(this.modules.server, {
       cors: {
         origin: true,
@@ -165,19 +164,19 @@ const SOCKET = new Deva({
     this.listen('devacore:zone', packet => {
       this.func.emit(`${agent.key}:devacore`, packet);
     });
-    return Promise.resolve(data);
+    return this.start(data);
   },
 
   /**************
-  func: onInit
+  func: onDone
   params: none
   describe: The onInit function sets the socket port and server information
   and prompts it to the user console before returning the this.start() function.
   ***************/
-  onInit(data) {
-    this.prompt(`${this.vars.messages.init} port:${this.config.ports.socket}`);
+  onDone(data) {
+    this.prompt(`port:${this.config.ports.socket}`);
     this.modules.server.listen(this.config.ports.socket);
-    return this.start(data);
+    return Promise.resolve(data);
   },
 });
 module.exports = SOCKET
