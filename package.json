@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/indraai/SocketDeva#readme",
   "devDependencies": {
-    "@indra.ai/deva": "^1.2.20"
+    "@indra.ai/deva": "^1.2.21"
   }
 }
