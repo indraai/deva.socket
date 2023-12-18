@@ -22,11 +22,9 @@
     "url": "https://github.com/indraai/SocketDeva/issues"
   },
   "dependencies": {
+    "@indra.ai/deva": "^1.2.22",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
-  "homepage": "https://github.com/indraai/SocketDeva#readme",
-  "devDependencies": {
-    "@indra.ai/deva": "^1.2.22"
-  }
+  "homepage": "https://github.com/indraai/SocketDeva#readme"
 }

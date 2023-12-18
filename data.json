@@ -2,7 +2,7 @@
   "name": "SOCKET Data File",
   "describe": "The main Data file for SOCKET",
   "copyright": "Copyright (c)2023 Quinn Michaels. All rights reserved.",
-  "data": {
+  "DATA": {
     "agent": {
       "id": 5318566628492,
       "key": "socket",
@@ -66,7 +66,9 @@
         "profile": "deva",
         "max_tokens": 50,
         "words": 25,
-        "history": []
+        "history": [],
+        "max_chats": 5,
+        "page_token": ""
       },
       "ask": {
         "max_tokens": 500,

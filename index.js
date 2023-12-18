@@ -1,8 +1,8 @@
 // Copyright (c)2022 Quinn Michaels
 // The Socket Deva
 const Deva = require('@indra.ai/deva');
-const fs = require('fs');
-const path = require('path');
+const Socket = require('socket.io');
+const {agent,vars} = require('./data.json').DATA;
 const package = require('./package.json');
 const info = {
   id: package.id,
@@ -17,12 +17,6 @@ const info = {
   license: package.license,
   copyright: package.copyright,
 };
-
-const data_path = path.join(__dirname, 'data.json');
-const {agent,vars} = require(data_path).data;
-
-const Socket = require('socket.io');
-
 const SOCKET = new Deva({
   info,
   agent,
