@@ -1,30 +1,30 @@
 {
   "id": 5318566628492,
-  "name": "@indra.ai/socketdeva",
-  "version": "0.0.34",
+  "name": "@indra.ai/deva.socket",
+  "version": "0.0.1",
   "author": "Quinn Michaels",
   "description": "The Socket Deva",
   "license": "MIT",
-  "copyright": "2023",
+  "copyright": "2025",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/indraai/SocketDeva.git"
+    "url": "git+ssh://git@github.com/indraai/deva.socket.git"
   },
   "keywords": [
     "Socket",
     "Deva"
   ],
   "bugs": {
-    "url": "https://github.com/indraai/SocketDeva/issues"
+    "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
     "@indra.ai/deva": "^1.2.22",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
-  "homepage": "https://github.com/indraai/SocketDeva#readme"
+  "homepage": "https://deva.space/socket"
 }
