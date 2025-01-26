@@ -16,7 +16,10 @@
   },
   "keywords": [
     "Socket",
-    "Deva"
+    "Deva",
+    "Deva.space",
+    "Deva.cloud",
+    "Deva.world"
   ],
   "bugs": {
     "url": "https://github.com/indraai/deva.socket/issues"
@@ -26,5 +29,5 @@
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
-  "homepage": "https://deva.space/socket"
+  "homepage": "https://deva.space/devas/socket"
 }
