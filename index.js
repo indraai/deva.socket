@@ -1,21 +1,28 @@
-// Copyright (c)2022 Quinn Michaels
+// Copyright (c)2025 Quinn Michaels
 // The Socket Deva
-const Deva = require('@indra.ai/deva');
-const Socket = require('socket.io');
-const {agent,vars} = require('./data.json').DATA;
-const package = require('./package.json');
+import Deva from '@indra.ai/deva';
+import Socket from 'socket.io';
+import data from './data.json' with {type:'json'};
+const {agent, vars} = data.DATA
+import pkg from './package.json' with {type:'json'};
+
+// set the __dirname
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const info = {
-  id: package.id,
-  name: package.name,
-  describe: package.description,
-  version: package.version,
+  id: pkg.id,
+  name: pkg.name,
+  describe: pkg.description,
+  version: pkg.version,
   dir: __dirname,
-  url: package.homepage,
-  git: package.repository.url,
-  bugs: package.bugs.url,
-  author: package.author,
-  license: package.license,
-  copyright: package.copyright,
+  url: pkg.homepage,
+  git: pkg.repository.url,
+  bugs: pkg.bugs.url,
+  author: pkg.author,
+  license: pkg.license,
+  copyright: pkg.copyright,
 };
 const SOCKET = new Deva({
   info,
@@ -173,4 +180,4 @@ const SOCKET = new Deva({
     return Promise.resolve(data);
   },
 });
-module.exports = SOCKET
+export default SOCKET
