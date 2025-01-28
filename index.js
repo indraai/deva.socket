@@ -1,7 +1,9 @@
 // Copyright (c)2025 Quinn Michaels
 // The Socket Deva
 import Deva from '@indra.ai/deva';
-import Socket from 'socket.io';
+import {createServer} from 'node:http';
+import {Server} from 'socket.io';
+
 import data from './data.json' with {type:'json'};
 const {agent, vars} = data.DATA
 import pkg from './package.json' with {type:'json'};
@@ -84,7 +86,7 @@ const SOCKET = new Deva({
     },
   },
   modules: {
-    server: require('http').createServer(),
+    server: createServer(),
     socket: false,
   },
   sockets: {},
@@ -132,7 +134,7 @@ const SOCKET = new Deva({
   socket..
   ***************/
   onInit(data) {
-    this.modules.socket = Socket(this.modules.server, {
+    this.modules.socket = new Server(this.modules.server, {
       cors: {
         origin: true,
         methods: ["GET", "POST"],
