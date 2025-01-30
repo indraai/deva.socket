@@ -144,9 +144,6 @@ const SOCKET = new Deva({
       socket.join(`client:${data.client.id}`);
       socket.emit('socket:clientdata', data.client);
       socket.on('disconnect', () => {})
-        // .on('client:data', data => {
-        //   socket.join(data.id);
-        // });
     });
 
     this.listen('devacore:prompt', packet => {
