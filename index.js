@@ -133,7 +133,7 @@ const SOCKET = new Deva({
   and watches for disconnect and client:data events before joining a private
   socket..
   ***************/
-  onInit(data) {
+  onInit(data, resolve) {
     this.modules.socket = new Server(this.modules.server, {
       cors: {
         origin: true,
@@ -167,7 +167,7 @@ const SOCKET = new Deva({
     this.listen('devacore:zone', packet => {
       this.func.emit(`${agent.key}:devacore`, packet);
     });
-    return this.start(data);
+    return this.start(data, resolve);
   },
 
   /**************
