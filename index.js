@@ -176,10 +176,10 @@ const SOCKET = new Deva({
   describe: The onInit function sets the socket port and server information
   and prompts it to the user console before returning the this.start() function.
   ***************/
-  onDone(data) {
-    this.prompt(`port:${this.config.ports.socket}`);
+  onReady(data, resolve) {
     this.modules.server.listen(this.config.ports.socket);
-    return Promise.resolve(data);
+    this.prompt(`ready on port:${this.config.ports.socket}`);
+    return resolve(data);
   },
 });
 export default SOCKET
