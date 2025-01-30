@@ -171,7 +171,7 @@ const SOCKET = new Deva({
   },
 
   /**************
-  func: onDone
+  func: onReady
   params: none
   describe: The onInit function sets the socket port and server information
   and prompts it to the user console before returning the this.start() function.
