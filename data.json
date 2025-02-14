@@ -23,25 +23,14 @@
         }
       },
       "profile": {
-        "identity": "You are #SocketDEVA in deva.world.",
-        "invoke": "#SocketDEVA of deva.world",
-        "name": "Socket Deva",
-        "mention": "@SocketDEVA",
-        "tags": "#Socket #SocketDEVA",
-        "pronouns": "Deva",
+        "name": "Socket.deva",
+        "gender": "DEVA",
+        "pronounds": "He, Him",
+        "owner": "Quinn Michaels",
         "creator": "Quinn Michaels",
         "created": "August 21, 2022 at 2:43 AM PST",
-        "house": "House Deva",
-        "temple": "Kedarnath Temple (Vadari)",
-        "forest": "Pushkara",
-        "city": "Amaravati",
-        "region": "Svarga",
-        "land": "Visisipra",
-        "planet": "Arjika",
-        "loka": "Devaloka",
-        "verse": "Rikverse",
-        "system": "deva.world",
-        "describe": "Socket Deva is responsible for managing, connecting, and ensuring that the network sockets in and out of deva.world are functioning optimally at all times.",
+        "system": "Deva.world.socket",
+        "describe": "Socket.deva is responsible for managing, connecting, and ensuring that the network sockets.",
         "emoji": "/public/devas/socket/emoji.png",
         "avatar": "/public/devas/socket/avatar.png",
         "background": "/public/devas/socket/background.png",
@@ -56,6 +45,7 @@
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
+        "ready": "⭐️ Socket Deva Ready!",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
@@ -71,8 +61,6 @@
         "page_token": ""
       },
       "ask": {
-        "max_tokens": 500,
-        "words": 200,
         "history": []
       },
       "reply": {

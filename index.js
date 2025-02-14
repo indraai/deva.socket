@@ -175,8 +175,13 @@ const SOCKET = new Deva({
   ***************/
   onReady(data, resolve) {
     this.modules.server.listen(this.config.ports.socket);
-    this.prompt(`ready on port:${this.config.ports.socket}`);
+    this.prompt(`${this.vars.messages.ready} port:${this.config.ports.socket}`);
     return resolve(data);
   },
+  onError(err, data, reject) {
+    this.prompt(this.vars.messages.error);
+    console.log(err);
+    return reject(err);
+  }
 });
 export default SOCKET
