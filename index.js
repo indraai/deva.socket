@@ -4,9 +4,8 @@ import Deva from '@indra.ai/deva';
 import {createServer} from 'node:http';
 import {Server} from 'socket.io';
 
-import data from './data.json' with {type:'json'};
-const {agent, vars} = data.DATA
 import pkg from './package.json' with {type:'json'};
+const {agent, vars} = pkg.data
 
 // set the __dirname
 import {dirname} from 'node:path';
@@ -175,12 +174,11 @@ const SOCKET = new Deva({
   ***************/
   onReady(data, resolve) {
     this.modules.server.listen(this.config.ports.socket);
-    this.prompt(`${this.vars.messages.ready} port:${this.config.ports.socket}`);
+    thi.prompt(`${this.vars.messages.ready} port:${this.config.ports.socket}`);
     return resolve(data);
   },
   onError(err, data, reject) {
     this.prompt(this.vars.messages.error);
-    console.log(err);
     return reject(err);
   }
 });
