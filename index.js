@@ -174,7 +174,7 @@ const SOCKET = new Deva({
   ***************/
   onReady(data, resolve) {
     this.modules.server.listen(this.config.ports.socket);
-    thi.prompt(`${this.vars.messages.ready} port:${this.config.ports.socket}`);
+    this.prompt(`${this.vars.messages.ready} port:${this.config.ports.socket}`);
     return resolve(data);
   },
   onError(err, data, reject) {
