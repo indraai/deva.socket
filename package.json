@@ -53,20 +53,27 @@
         }
       },
       "profile": {
-        "name": "Socket Deva",
+        "name": "#SocketDeva",
+        "title": "Socket Deva",
+        "subtitle": "Managing Websockets in Deva.world",
+        "describe": "Socket Deva is responsible for managing, connecting, and ensuring that the network sockets.",
+        "tweet": "Socket Deva managing, connecting, and ensuring that the network sockets.",
+        "hashtags": "QuinnMichaels,IndraAI,DevaWorld,SocketDeva",
+        "pronouns": "He, Him",
         "gender": "DEVA",
-        "pronounds": "He, Him",
+        "style": "Network designer",
+        "voice": "onyx",
+        "system": "Deva.world.socket",
+        "layout": "default",
+        "color": "rgb(32,78,207)",
+        "bgcolor": "rgb(0,0,0)",
+        "emoji": "/assets/devas/socket/emoji.png",
+        "avatar": "/assets/devas/socket/avatar.png",
+        "image": "/assets/devas/socket/image.png",
+        "background": "/assets/devas/socket/background.png",
         "owner": "Quinn Michaels",
         "creator": "Quinn Michaels",
-        "created": "August 21, 2022 at 2:43 AM PST",
-        "system": "Deva.world.socket",
-        "describe": "Socket Deva is responsible for managing, connecting, and ensuring that the network sockets.",
-        "emoji": "/public/devas/socket/emoji.png",
-        "avatar": "/public/devas/socket/avatar.png",
-        "background": "/public/devas/socket/background.png",
-        "color": "#204ecf",
-        "bgcolor": "#000000",
-        "voice": "onyx"
+        "created": "August 21, 2022 at 2:43 AM PST"
       }
     },
     "vars": {
