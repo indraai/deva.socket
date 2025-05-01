@@ -27,7 +27,7 @@
     "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.5.35",
+    "@indra.ai/deva": "^1.5.37",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
@@ -53,10 +53,11 @@
         }
       },
       "profile": {
-        "name": "#SocketDeva",
+        "name": "Socket Deva",
+        "hashtag": "#SocketDeva",
         "title": "Socket Deva",
         "subtitle": "Managing Websockets in Deva.world",
-        "describe": "Socket Deva is responsible for managing, connecting, and ensuring that the network sockets.",
+        "describe": "Socket Deva is responsible for managing, connecting network sockets.",
         "tweet": "Socket Deva managing, connecting, and ensuring that the network sockets.",
         "hashtags": "QuinnMichaels,IndraAI,DevaWorld,SocketDeva",
         "pronouns": "He, Him",
