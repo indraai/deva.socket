@@ -27,7 +27,7 @@
     "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.6.59",
+    "@indra.ai/deva": "^1.6.61",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
