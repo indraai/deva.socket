@@ -79,10 +79,10 @@ const SOCKET = new Deva({
     params: packet
     describe: Broadcast errors to the socket.
     ***************/
-    'error'(packet) {
-      if (!packet || !this._active) return;
-      this.func.emit({say:'error', message:packet});
-    },
+    // 'error'(packet) {
+    //   if (!packet || !this._active) return;
+    //   this.func.emit({say:'error', message:packet});
+    // },
   },
   modules: {
     server: createServer(),
@@ -173,9 +173,9 @@ const SOCKET = new Deva({
   and prompts it to the user console before returning the this.start() function.
   ***************/
   onReady(data, resolve) {
-    this.modules.server.listen(this.config.ports.socket);
-    this.prompt(`${this.vars.messages.ready} port:${this.config.ports.socket}`);
-    return resolve(data);
+    // this.modules.server.listen(this.config.ports.socket);
+    // this.prompt(`${this.vars.messages.ready} port:${this.config.ports.socket}`);
+    // return resolve(data);
   },
   onError(err, data, reject) {
     this.prompt(this.vars.messages.error);
