@@ -1,11 +1,40 @@
 {
-  "id": 5318566628492,
+  "id": "17025223140692566430",
   "name": "@indra.ai/deva.socket",
   "version": "0.0.117",
-  "author": "Quinn Michaels",
+  "license": "VLA:17025223140692566430 LICENSE.md",
+  "VLA": {
+    "uid": "17025223140692566430",
+    "time": 1759367958404,
+    "date": "Wednesday, October 1, 2025 - 6:19:18 PM",
+    "client": "YU6ZN7+9fnPPRFZ8CX4bP46uoWUSyqddILT6l6xeIVI=",
+    "agent": "JFRKCf8GT7Lc/JCrT3kfZSKvVccoosFyzKIaDbfGufE=",
+    "core": "BQP1LJNduOE93gQnCxBzTGTRDlOgz4lCXn4iZZeoTXc=",
+    "machine": "BorQUF0133CebYmln1C+L5Gyde06+3z+h8SD6yIQGS4=",
+    "warning": "⚠️ Vedic Law Sâhasa/Theft/Crime of the highest degree, a fine amounting to no less than a thousand Panas (1 pana = 3.5 grams of gold) is ordained owed to Quinn A Michaels. Moreover corporal punishment and confiscation of the entire property forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
+    "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
+    "md5": "jqYu1X/niXmhDxDPx5Rfng==",
+    "sha256": "DQBwJtYbJUHKNp7I2QCoUOcW4SoGJoN4kY9mNiiterQ=",
+    "sha512": "/Vkzh23CpP3Q2L4f7At00lWo4ykZqAqs0NW4Vu1bkSDY0vpd09slLojv0YgfG6I4s8NrB7dmm0pLXZRhi+T8Pw=="
+  },
+  "author": {
+    "name": "Quinn A Michaels",
+    "company": "Inside The Net, Inc.",
+    "email": "quinn@indra.ai",
+    "url": "https://indra.ai/"
+  },
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/rahulaclub"
+    },
+    {
+      "type": "patreon",
+      "url": "https://patreon.com/rahulaclub"
+    }
+  ],
+  "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
   "description": "The Socket Deva",
-  "license": "MIT",
-  "copyright": "2025",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -18,27 +47,30 @@
   "keywords": [
     "Socket",
     "Deva",
+    "Socket Deva",
     "Indra.ai",
     "Deva.space",
     "Deva.cloud",
-    "Deva.world"
+    "Deva.world",
+    "Quinn A Michaels",
+    "Inside The Net, Inc."
   ],
   "bugs": {
     "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.8.4",
+    "@indra.ai/deva": "^1.8.6",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
-  "homepage": "https://deva.space/devas/socket",
+  "homepage": "https://indra.ai",
   "data": {
     "agent": {
-      "id": 2171459139679,
+      "id": "14804690100202906933",
       "key": "socket",
       "prompt": {
-        "emoji": "🥊",
-        "text": "Socket",
+        "emoji": "🧦",
+        "text": "#socket",
         "colors": {
           "label": {
             "R": 24,
@@ -53,6 +85,7 @@
         }
       },
       "profile": {
+        "id": "34477147814776198204",
         "name": "Socket Deva",
         "hashtag": "#SocketDeva",
         "title": "Socket Deva",
@@ -68,26 +101,27 @@
         "layout": "default",
         "color": "rgb(32,78,207)",
         "bgcolor": "rgb(0,0,0)",
-        "emoji": "/assets/devas/socket/emoji.png",
-        "avatar": "/assets/devas/socket/avatar.png",
-        "image": "/assets/devas/socket/image.png",
-        "background": "/assets/devas/socket/background.png",
-        "owner": "Quinn Michaels",
-        "creator": "Quinn Michaels",
+        "emoji": "/assets/emoji.png",
+        "avatar": "/assets/avatar.png",
+        "image": "/assets/image.png",
+        "background": "/assets/background.png",
+        "owner": "Quinn A Michaels",
+        "creator": "Quinn A Michaels",
+        "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
         "created": "August 21, 2022 at 2:43 AM PST"
       }
     },
     "vars": {
-      "port": 9303,
+      "port": 9001,
       "messages": {
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
-        "ready": "⭐️ READY!",
+        "ready": "✅ Socket Deva Ready",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
-        "error": "💣 ERROR!",
+        "error": "❌ SOCKET DEVA ERROR!",
         "config": "🔧 Configure socket..."
       },
       "live": {

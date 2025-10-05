@@ -1,19 +1,23 @@
-// Copyright (c)2022 Quinn Michaels
+"use strict";
+// Copyright ©2025 Quinn A Michaels; All rights reserved. 
+// Legal Signature Required For Lawful Use.
+// Distributed under VLA:17025223140692566430 LICENSE.md
+
 // SOCKET test file
 
 const {expect} = require('chai')
-const socket = require('./index.js');
+const SocketDeva = require('./index.js');
 
-describe(socket.me.name, () => {
+describe(SocketDeva.me.name, () => {
   beforeEach(() => {
-    return socket.init()
+    return SocketDeva.init()
   });
   it('Check the SVARGA Object', () => {
-    expect(socket).to.be.an('object');
-    expect(socket).to.have.property('me');
-    expect(socket).to.have.property('vars');
-    expect(socket).to.have.property('listeners');
-    expect(socket).to.have.property('methods');
-    expect(socket).to.have.property('modules');
+    expect(SocketDeva).to.be.an('object');
+    expect(SocketDeva).to.have.property('me');
+    expect(SocketDeva).to.have.property('vars');
+    expect(SocketDeva).to.have.property('listeners');
+    expect(SocketDeva).to.have.property('methods');
+    expect(SocketDeva).to.have.property('modules');
   });
 })
