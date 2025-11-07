@@ -53,13 +53,15 @@
     "Deva.cloud",
     "Deva.world",
     "Quinn A Michaels",
-    "Inside The Net, Inc."
+    "Inside The Net, Inc.",
+    "Throwing Pigment™",
+    "bleuBrain"
   ],
   "bugs": {
     "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.20.4",
+    "@indra.ai/deva": "^1.20.5",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
@@ -101,10 +103,10 @@
         "layout": "default",
         "color": "rgb(32,78,207)",
         "bgcolor": "rgb(0,0,0)",
-        "emoji": "/assets/emoji.png",
-        "avatar": "/assets/avatar.png",
-        "image": "/assets/image.png",
-        "background": "/assets/background.png",
+        "emoji": "/devas/socket/emoji.png",
+        "avatar": "/devas/socket/avatar.png",
+        "image": "/devas/socket/image.png",
+        "background": "/devas/socket/background.png",
         "owner": "Quinn A Michaels",
         "creator": "Quinn A Michaels",
         "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
