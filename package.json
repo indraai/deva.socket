@@ -1,21 +1,16 @@
 {
-  "id": "17025223140692566430",
+  "id": "42145145912971709058",
   "name": "@indra.ai/deva.socket",
   "version": "0.7.1",
-  "license": "VLA:17025223140692566430 LICENSE.md",
+  "license": "VLA:42145145912971709058 LICENSE.md",
   "VLA": {
-    "uid": "17025223140692566430",
-    "time": 1759367958404,
-    "date": "Wednesday, October 1, 2025 - 6:19:18 PM",
-    "client": "YU6ZN7+9fnPPRFZ8CX4bP46uoWUSyqddILT6l6xeIVI=",
-    "agent": "JFRKCf8GT7Lc/JCrT3kfZSKvVccoosFyzKIaDbfGufE=",
-    "core": "BQP1LJNduOE93gQnCxBzTGTRDlOgz4lCXn4iZZeoTXc=",
-    "machine": "BorQUF0133CebYmln1C+L5Gyde06+3z+h8SD6yIQGS4=",
-    "warning": "⚠️ Vedic Law Sâhasa/Theft/Crime of the highest degree, a fine amounting to no less than a thousand Panas (1 pana = 3.5 grams of gold) is ordained owed to Quinn A Michaels. Moreover corporal punishment and confiscation of the entire property forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
-    "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
-    "md5": "jqYu1X/niXmhDxDPx5Rfng==",
-    "sha256": "DQBwJtYbJUHKNp7I2QCoUOcW4SoGJoN4kY9mNiiterQ=",
-    "sha512": "/Vkzh23CpP3Q2L4f7At00lWo4ykZqAqs0NW4Vu1bkSDY0vpd09slLojv0YgfG6I4s8NrB7dmm0pLXZRhi+T8Pw=="
+    "uid": "42145145912971709058",
+    "time": 1763819946205,
+    "date": "Saturday, November 22, 2025 - 5:59:06 AM",
+    "warning": "⚠️ Unlawful use or duplication of this uid constitutes Vedic Sâhasa a crime of the highest degree. A fine amounting to a thousand Panas (1 pana = 3.5 grams of gold) for each instance is ordained, and confiscation of the entire property of the offenders is forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
+    "license": "46220923248993739422",
+    "fingerprint": "Nskoz66/V67zrAddE6y+xQHRgxxb2d/F8wFx7rOAs7k=",
+    "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved."
   },
   "author": {
     "name": "Quinn A Michaels",
@@ -33,7 +28,7 @@
       "url": "https://patreon.com/rahulaclub"
     }
   ],
-  "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
+  "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved.",
   "description": "The Socket Deva",
   "main": "index.js",
   "type": "module",
@@ -89,7 +84,7 @@
       "profile": {
         "id": "34477147814776198204",
         "name": "Socket Deva",
-        "hashtag": "#SocketDeva",
+        "hashtag": "#socket",
         "title": "Socket Deva",
         "subtitle": "Managing Websockets in Deva.world",
         "describe": "Socket Deva is responsible for managing, connecting network sockets.",
@@ -109,8 +104,9 @@
         "background": "/devas/socket/background.png",
         "owner": "Quinn A Michaels",
         "creator": "Quinn A Michaels",
-        "copyright": "Copyright ©2025 Quinn A Michaels; All rights reserved.",
-        "created": "August 21, 2022 at 2:43 AM PST"
+        "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved.",
+        "created": "August 21, 2022 at 2:43 AM PST",
+        "updated": "Saturday, November 22, 2025 - 5:58:18 AM"
       }
     },
     "vars": {
@@ -119,7 +115,7 @@
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
-        "ready": "✅ Socket Deva Ready",
+        "ready": "⭐️ Socket Deva Ready",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",

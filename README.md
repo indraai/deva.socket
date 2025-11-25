@@ -6,4 +6,6 @@ The Socket Deva
 
 `const socket = require('@indra.ai/socketdeva')`;
 
-(c)Copyright 2023, Quinn Michaels; All Rights Reserved
+Copyright ©2000-2025 Quinn A Michaels; All rights reserved.  
+Legal Signature Required For Lawful Use.  
+Distributed under VLA:42145145912971709058 LICENSE.md

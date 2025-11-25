@@ -1,7 +1,7 @@
 "use strict";
 // Copyright ©2025 Quinn A Michaels; All rights reserved. 
 // Legal Signature Required For Lawful Use.
-// Distributed under VLA:17025223140692566430 LICENSE.md
+// Distributed under VLA:42145145912971709058 LICENSE.md
 
 // SOCKET test file
 
