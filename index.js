@@ -1,7 +1,9 @@
 "use strict";
-// Copyright ©2025 Quinn A Michaels; All rights reserved. 
+// Socket Deva
+// Copyright ©2000-2026 Quinn A Michaels; All rights reserved. 
 // Legal Signature Required For Lawful Use.
-// Distributed under VLA:42145145912971709058 LICENSE.md
+// Distributed under VLA:68173929743679096434 LICENSE.md
+// Friday, January 30, 2026 - 10:27:03 AM
 
 // The Socket Deva
 import Deva from '@indra.ai/deva';
@@ -30,7 +32,7 @@ const info = {
   VLA: pkg.VLA,
   copyright: pkg.copyright,
 };
-const SOCKET = new Deva({
+const SocketDeva = new Deva({
   info,
   agent,
   vars,
@@ -189,8 +191,8 @@ const SOCKET = new Deva({
   },
   onError(err, data, reject) {
     this.prompt(this.vars.messages.error);
-    console.log('SOCKET ERROR', err);
+    console.log('SocketDeva ERROR', err);
     return reject(err);
   }
 });
-export default SOCKET
+export default SocketDeva

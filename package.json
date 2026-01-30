@@ -1,16 +1,16 @@
 {
-  "id": "42145145912971709058",
+  "id": "68173929743679096434",
   "name": "@indra.ai/deva.socket",
   "version": "0.8.31",
-  "license": "VLA:42145145912971709058 LICENSE.md",
+  "license": "VLA:68173929743679096434 LICENSE.md",
   "VLA": {
-    "uid": "42145145912971709058",
-    "time": 1763819946205,
-    "date": "Saturday, November 22, 2025 - 5:59:06 AM",
-    "warning": "⚠️ Unlawful use or duplication of this uid constitutes Vedic Sâhasa a crime of the highest degree. A fine amounting to a thousand Panas (1 pana = 3.5 grams of gold) for each instance is ordained, and confiscation of the entire property of the offenders is forfeit to Quinn A Michaels is declared to be the punishment for Sâhasa of the highest degree.",
-    "license": "46220923248993739422",
-    "fingerprint": "Nskoz66/V67zrAddE6y+xQHRgxxb2d/F8wFx7rOAs7k=",
-    "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved."
+    "uid": "68173929743679096434",
+    "time": 1769797623172,
+    "date": "Friday, January 30, 2026 - 10:27:03 AM",
+    "warning": "🪪 #LicenseDeva warns #UnlawfulUse or #Duplication constitutes #VedicSahasa a #Crime of the #HighestDegree. A #Fine amounting to 1000 #Panas (1 pana = 3.5 grams of gold) for each #Instance has been #Ordained the #Punishment for #Sahasa of the #HighestDegree. #Quinn #QuinnMichaels #InsideTheNet #IndraAI #DevaWorld #License #LicenseDeva #LicensePRIME #VedicLicenseAgreement",
+    "license": "44486733861528360966",
+    "fingerprint": "vOwX/RE9Dzit+WEuh6eGdR1Obq9gg9FdrWPJS6DTRh0=",
+    "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved."
   },
   "author": {
     "name": "Quinn A Michaels",
@@ -28,11 +28,12 @@
       "url": "https://patreon.com/rahulaclub"
     }
   ],
-  "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved.",
+  "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved.",
   "description": "The Socket Deva",
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "latest": "npm i @indra.ai/deva@latest --save",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -47,6 +48,7 @@
     "Deva.space",
     "Deva.cloud",
     "Deva.world",
+    "Quinn Michaels",
     "Quinn A Michaels",
     "Inside The Net, Inc.",
     "Throwing Pigment™",
@@ -56,7 +58,7 @@
     "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.29.31",
+    "@indra.ai/deva": "^1.33.0",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
   },
@@ -89,12 +91,12 @@
         "subtitle": "Managing Websockets in Deva.world",
         "describe": "Socket Deva is responsible for managing, connecting network sockets.",
         "tweet": "Socket Deva managing, connecting, and ensuring that the network sockets.",
-        "hashtags": "QuinnMichaels,IndraAI,DevaWorld,SocketDeva",
+        "hashtags": "#Quinn QuinnMichaels #InsidetheNet #IndraAI #DevaWorld #Socket #SocketDeva #SocketPRIME",
         "pronouns": "He, Him",
         "gender": "DEVA",
         "style": "Network designer",
         "voice": "onyx",
-        "system": "Deva.world.socket",
+        "system": "Indra.ai.socket",
         "layout": "default",
         "color": "rgb(32,78,207)",
         "bgcolor": "rgb(0,0,0)",
@@ -104,9 +106,9 @@
         "background": "/devas/socket/background.png",
         "owner": "Quinn A Michaels",
         "creator": "Quinn A Michaels",
-        "copyright": "Copyright ©2000-2025 Quinn A Michaels; All rights reserved.",
+        "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved.",
         "created": "August 21, 2022 at 2:43 AM PST",
-        "updated": "Saturday, November 22, 2025 - 5:58:18 AM"
+        "updated": "Friday, January 30, 2026 - 10:27:03 AM"
       }
     },
     "vars": {
@@ -115,7 +117,7 @@
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
-        "ready": "⭐️ Socket Deva Ready",
+        "ready": "🧦 Socket Deva Ready",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
