@@ -33,7 +33,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "latest": "npm i @indra.ai/deva@latest --save",
+    "latest": "npm i @indra.ai/deva@latest socket.io@latest socket.io-client@latest --save",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -58,9 +58,9 @@
     "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.35.0",
-    "socket.io": "^4.6.1",
-    "socket.io-client": "^4.6.1"
+    "@indra.ai/deva": "^1.36.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3"
   },
   "homepage": "https://indra.ai",
   "data": {
