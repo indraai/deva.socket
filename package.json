@@ -58,7 +58,7 @@
     "url": "https://github.com/indraai/deva.socket/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.36.0",
+    "@indra.ai/deva": "^1.37.3",
     "socket.io": "^4.8.3",
     "socket.io-client": "^4.8.3"
   },
@@ -91,7 +91,7 @@
         "subtitle": "Managing Websockets in Deva.world",
         "describe": "Socket Deva is responsible for managing, connecting network sockets.",
         "tweet": "Socket Deva managing, connecting, and ensuring that the network sockets.",
-        "hashtags": "#Quinn QuinnMichaels #InsidetheNet #IndraAI #DevaWorld #Socket #SocketDeva #SocketPRIME",
+        "hashtags": "#Quinn #QuinnMichaels #InsideTheNet #ThrowingPigment #bleuBrain #IndraAI #DevaWorld #DevaClound #DevaSpace #Socket #SocketDeva #SocketPRIME",
         "pronouns": "He, Him",
         "gender": "DEVA",
         "style": "Network designer",
@@ -108,7 +108,7 @@
         "creator": "Quinn A Michaels",
         "copyright": "Copyright ©2000-2026 Quinn A Michaels; All rights reserved.",
         "created": "August 21, 2022 at 2:43 AM PST",
-        "updated": "Friday, January 30, 2026 - 10:27:03 AM"
+        "updated": "Thursday, April 2, 2026 - 3:42:18 PM"
       }
     },
     "vars": {
